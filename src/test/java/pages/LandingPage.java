@@ -16,6 +16,8 @@ public class LandingPage {
 	private static WebElement olDepartList;
 	@FindBy(how = How.XPATH, using = "//div[@class='search-flight  js-search-flight']//input[@name = 'Arrival airport']")
 	private static WebElement ArrivalCity;
+	@FindBy(how = How.XPATH, using = "//div[@data-subsection='flight']/div[@class = 'destination-dropdown']//section[@class='location global']/ol[@class='location__list']")
+	private static WebElement olArrivalDDL;
 	@FindBy(how=How.XPATH, using = "//ol[@class='location__list']/li[@data-dropdown-id = 'LHR']")
 	private static WebElement olArrivalList;
 	@FindBy(how = How.XPATH, using = "//a[@class='cta cta--large cta--primary js-continue-search-flight search-flight__continue--cta ']")
@@ -59,5 +61,9 @@ public class LandingPage {
 	}
 	public static WebElement olDepartListElement(){
 		return olDepartList;
+	}
+
+	public static WebElement olArrivalDDLElement(){
+		return olArrivalDDL;
 	}
 }

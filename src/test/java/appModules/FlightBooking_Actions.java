@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pages.LandingPage;
@@ -31,6 +32,7 @@ public class FlightBooking_Actions {
 		wait.until(ExpectedConditions.visibilityOf(LandingPage.olDepartListElement()));
 		LandingPage.olDepartListElement().click();
 		LandingPage.arrivalCityElement().clear();
+		wait.until(ExpectedConditions.visibilityOf(LandingPage.olArrivalDDLElement()));
 		LandingPage.arrivalCityElement().sendKeys(strDestination);
 		wait.until(ExpectedConditions.visibilityOf(LandingPage.olArrivalListElement()));
 		LandingPage.olArrivalListElement();
